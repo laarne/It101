@@ -25,7 +25,7 @@ import {
 import { Link } from "react-router";
 import { studentInfo, currentSchedule, balances, clearanceStatus, announcements, grades } from "../data/mockData";
 import campusImg from "../../imports/image.png";
-import studentImg from "../../imports/student.png";
+import studentImg from "../../imports/Student.png";
 
 export function Dashboard() {
   const todaySchedule = currentSchedule.slice(0, 3);
