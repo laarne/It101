@@ -106,7 +106,7 @@ export function Layout() {
       <header
         className="relative border-b border-green-800 sticky top-0 z-40 shadow-lg overflow-hidden"
         style={{
-          background: `linear-gradient(to right, rgba(21, 128, 61, 0.95), rgba(6, 78, 59, 0.95)), url(${campusImg})`,
+          background: `linear-gradient(to right, var(--banner-overlay), var(--banner-overlay-soft)), url(${campusImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

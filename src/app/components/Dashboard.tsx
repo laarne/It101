@@ -41,7 +41,7 @@ export function Dashboard() {
       <div 
         className="rounded-xl p-6 sm:p-10 text-white relative overflow-hidden shadow-lg border border-green-700/20"
         style={{
-          background: `linear-gradient(to right, rgba(5, 150, 105, 1) 50%, rgba(5, 150, 105, 0.4) 75%, rgba(5, 150, 105, 0) 100%), url(${studentImg})`,
+          background: `linear-gradient(to right, var(--banner-overlay) 50%, var(--banner-overlay-soft) 75%, transparent 100%), url(${studentImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'right 20%',
           backgroundRepeat: 'no-repeat'
