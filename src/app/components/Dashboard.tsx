@@ -39,19 +39,19 @@ export function Dashboard() {
     <div className="space-y-6">
       {/* Welcome Section with Campus Background */}
       <div 
-        className="rounded-xl p-6 sm:p-10 text-white relative overflow-hidden shadow-lg border border-green-700/20"
+        className="rounded-xl p-5 sm:p-10 text-white relative overflow-hidden shadow-2xl border border-white/5 dark:border-emerald-500/10"
         style={{
-          background: `linear-gradient(to right, var(--banner-overlay) 50%, var(--banner-overlay-soft) 75%, transparent 100%), url(${studentImg})`,
+          background: `linear-gradient(to right, var(--banner-overlay) 40%, var(--banner-overlay-soft) 70%, transparent 100%), url(${studentImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'right 20%',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="relative z-10">
-          <h1 className="text-3xl sm:text-4xl font-bold mb-2 drop-shadow-md">
+        <div className="relative z-10 max-w-2xl">
+          <h1 className="text-2xl sm:text-4xl font-bold mb-2 leading-tight drop-shadow-md">
             Welcome back, {studentInfo.name.split(",")[1]?.trim()}!
           </h1>
-          <p className="text-base sm:text-lg text-green-50 mb-6 font-medium opacity-90">
+          <p className="text-sm sm:text-lg text-green-50 mb-6 font-medium opacity-90">
             {studentInfo.program} • {studentInfo.yearLevel}
           </p>
           <div className="flex flex-wrap gap-2 sm:gap-3">
@@ -64,8 +64,8 @@ export function Dashboard() {
           </div>
         </div>
         
-        {/* Decorative elements */}
-        <div className="absolute top-0 right-0 w-64 h-full bg-gradient-to-l from-white/10 to-transparent pointer-events-none" />
+        {/* Decorative elements - Subtle emerald glow instead of white */}
+        <div className="absolute top-0 right-0 w-64 h-full bg-gradient-to-l from-emerald-400/10 to-transparent pointer-events-none" />
       </div>
 
       {/* Quick Stats */}
