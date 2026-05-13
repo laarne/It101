@@ -103,7 +103,7 @@ export function Layout() {
       )}
 
       {/* Header */}
-      <header 
+      <header
         className="relative border-b border-green-800 sticky top-0 z-40 shadow-lg overflow-hidden"
         style={{
           background: `linear-gradient(to right, rgba(21, 128, 61, 0.95), rgba(6, 78, 59, 0.95)), url(${campusImg})`,
@@ -119,12 +119,12 @@ export function Layout() {
             >
               {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            
+
             {/* Back Button (Fixes Heuristic #3) */}
             {location.pathname !== "/" && (
-              <Button 
-                variant="ghost" 
-                size="sm" 
+              <Button
+                variant="ghost"
+                size="sm"
                 onClick={() => navigate(-1)}
                 className="text-white hover:bg-green-600 px-2 flex items-center gap-1 group"
               >
@@ -147,9 +147,9 @@ export function Layout() {
           </div>
 
           <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-            <Button 
-              variant="ghost" 
-              size="sm" 
+            <Button
+              variant="ghost"
+              size="sm"
               onClick={toggleTheme}
               className="text-white hover:bg-green-600 p-2"
             >
@@ -190,11 +190,11 @@ export function Layout() {
                   Technical Support
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
-                
+
                 <AlertDialog>
                   <AlertDialogTrigger asChild>
-                    <DropdownMenuItem 
-                      className="text-red-600 cursor-pointer" 
+                    <DropdownMenuItem
+                      className="text-red-600 cursor-pointer"
                       onSelect={(e) => e.preventDefault()}
                     >
                       <LogOut size={16} className="mr-2" />
@@ -210,7 +210,7 @@ export function Layout() {
                     </AlertDialogHeader>
                     <AlertDialogFooter>
                       <AlertDialogCancel>Cancel</AlertDialogCancel>
-                      <AlertDialogAction 
+                      <AlertDialogAction
                         className="bg-red-600 hover:bg-red-700 text-white"
                         onClick={() => window.location.href = "/login"}
                       >
@@ -228,7 +228,7 @@ export function Layout() {
       <div className="flex">
         <aside
           className={`
-          fixed lg:sticky top-[65px] left-0 h-[calc(100vh-65px)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700
+          fixed lg:sticky top-[65px] left-0 h-[calc(100vh-65px)] w-72 bg-sidebar text-sidebar-foreground border-r border-sidebar-border
           transition-transform duration-300 ease-in-out z-30 overflow-y-auto
           ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}
         `}
@@ -278,10 +278,9 @@ export function Layout() {
                           onClick={() => setSidebarOpen(false)}
                           className={`
                             flex items-center gap-3 px-3 py-2 rounded-lg transition-colors text-sm
-                            ${
-                              isActive
-                                ? "bg-green-600 dark:bg-green-700 text-white"
-                                : "text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-700"
+                            ${isActive
+                              ? "bg-green-600 dark:bg-green-700 text-white"
+                              : "text-gray-700 dark:text-gray-300 hover:bg-green-50 dark:hover:bg-gray-700"
                             }
                           `}
                         >

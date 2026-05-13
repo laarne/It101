@@ -124,9 +124,9 @@ export function Dashboard() {
         <div className="lg:col-span-2 space-y-6">
           {/* Important Announcements */}
           {urgentAnnouncements.length > 0 && (
-            <Card className="border-amber-300 bg-amber-50/50">
+            <Card className="border-amber-300 dark:border-amber-900/50 bg-amber-50/50 dark:bg-amber-950/20">
               <CardHeader>
-                <CardTitle className="flex items-center gap-2 text-amber-900">
+                <CardTitle className="flex items-center gap-2 text-amber-900 dark:text-amber-400">
                   <AlertCircle size={20} />
                   Important Announcements
                 </CardTitle>
@@ -135,10 +135,10 @@ export function Dashboard() {
                 {urgentAnnouncements.map((announcement) => (
                   <div
                     key={announcement.id}
-                    className="p-4 bg-white rounded-lg border border-amber-200"
+                    className="p-4 bg-white dark:bg-amber-950/30 rounded-lg border border-amber-200 dark:border-amber-900/30"
                   >
                     <div className="flex items-start justify-between gap-2 mb-2">
-                      <h4 className="font-semibold text-gray-900">
+                      <h4 className="font-semibold text-gray-900 dark:text-amber-100">
                         {announcement.title}
                       </h4>
                       <Badge className="bg-amber-100 text-amber-700 hover:bg-amber-100">
@@ -391,7 +391,7 @@ export function Dashboard() {
         </CardHeader>
         <CardContent>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-            <button className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all text-left group">
+            <button className="flex items-center gap-3 p-3 bg-white dark:bg-emerald-950/20 border border-gray-200 dark:border-emerald-900/30 rounded-xl hover:bg-gray-50 dark:hover:bg-emerald-900/40 hover:border-gray-300 dark:hover:border-emerald-800 transition-all text-left group">
               <div className="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                 <Book size={18} className="text-green-700 dark:text-green-400" />
               </div>
@@ -401,7 +401,7 @@ export function Dashboard() {
               </div>
             </button>
 
-            <button className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all text-left group">
+            <button className="flex items-center gap-3 p-3 bg-white dark:bg-emerald-950/20 border border-gray-200 dark:border-emerald-900/30 rounded-xl hover:bg-gray-50 dark:hover:bg-emerald-900/40 hover:border-gray-300 dark:hover:border-emerald-800 transition-all text-left group">
               <div className="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                 <BookOpen size={18} className="text-green-700 dark:text-green-400" />
               </div>
@@ -411,7 +411,7 @@ export function Dashboard() {
               </div>
             </button>
 
-            <button className="flex items-center gap-3 p-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-all text-left group">
+            <button className="flex items-center gap-3 p-3 bg-white dark:bg-emerald-950/20 border border-gray-200 dark:border-emerald-900/30 rounded-xl hover:bg-gray-50 dark:hover:bg-emerald-900/40 hover:border-gray-300 dark:hover:border-emerald-800 transition-all text-left group">
               <div className="w-10 h-10 bg-green-50 dark:bg-green-900/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-white transition-colors">
                 <FileText size={18} className="text-green-700 dark:text-green-400" />
               </div>
