@@ -51,6 +51,7 @@ import { useTheme } from "../contexts/ThemeContext";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logoImg from "../../imports/Caraga_State_University.png";
 import campusImg from "../../imports/image.png";
+import profileImg from "../../imports/profile.png";
 
 const navItems = [
   { path: "/", label: "Dashboard", icon: Home, category: "main" },
@@ -164,7 +165,9 @@ export function Layout() {
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <Button variant="ghost" className="text-white hover:bg-green-600 p-2 sm:px-3">
-                  <User size={18} className="sm:w-5 sm:h-5 sm:mr-2" />
+                  <div className="w-6 h-6 sm:w-7 sm:h-7 rounded-full overflow-hidden mr-2 border border-white/20">
+                    <img src={profileImg} alt="Profile" className="w-full h-full object-cover" />
+                  </div>
                   <span className="hidden sm:inline text-sm">{studentInfo.name.split(",")[0]}</span>
                 </Button>
               </DropdownMenuTrigger>
@@ -235,9 +238,8 @@ export function Layout() {
         >
           <div className="p-4 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
             <div className="flex items-center gap-3 mb-2">
-              <div className="w-12 h-12 bg-green-600 dark:bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-lg">
-                {studentInfo.name.split(",")[1]?.trim().charAt(0)}
-                {studentInfo.name.split(",")[0]?.trim().charAt(0)}
+              <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-white dark:border-green-500 shadow-md">
+                <img src={profileImg} alt="Student Profile" className="w-full h-full object-cover" />
               </div>
               <div className="flex-1 min-w-0">
                 <p className="font-semibold text-gray-900 dark:text-gray-100 text-sm truncate">
