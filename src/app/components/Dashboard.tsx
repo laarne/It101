@@ -39,7 +39,7 @@ export function Dashboard() {
     <div className="space-y-6">
       {/* Welcome Section with Campus Background */}
       <div 
-        className="rounded-xl p-5 sm:p-10 text-white relative overflow-hidden shadow-2xl border border-white/5 dark:border-emerald-500/10"
+        className="rounded-xl p-5 sm:p-10 text-white relative overflow-hidden shadow-2xl dark:border-emerald-500/10"
         style={{
           background: `linear-gradient(to right, var(--banner-overlay) 40%, var(--banner-overlay-soft) 70%, transparent 100%), url(${studentImg})`,
           backgroundSize: 'cover',
@@ -145,10 +145,10 @@ export function Dashboard() {
                         {announcement.category}
                       </Badge>
                     </div>
-                    <p className="text-sm text-gray-600 mb-2">
+                    <p className="text-sm text-gray-600 dark:text-amber-200/70 mb-2">
                       {announcement.content}
                     </p>
-                    <p className="text-xs text-gray-500">
+                    <p className="text-xs text-gray-500 dark:text-amber-200/50">
                       {new Date(announcement.date).toLocaleDateString("en-US", {
                         month: "long",
                         day: "numeric",
