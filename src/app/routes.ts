@@ -17,11 +17,15 @@ import { Login } from "./components/Login";
 
 export const router = createBrowserRouter([
   {
+    path: "/",
+    Component: Login,
+  },
+  {
     path: "/login",
     Component: Login,
   },
   {
-    path: "/",
+    path: "/dashboard",
     Component: Layout,
     children: [
       { index: true, Component: Dashboard },

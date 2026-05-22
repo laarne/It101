@@ -90,7 +90,7 @@ export function Login() {
 
           <Button 
             className="w-full bg-green-600 hover:bg-green-700 text-white font-bold h-10 text-sm rounded-lg shadow-md shadow-green-200 dark:shadow-none transition-all active:scale-[0.98] mt-2"
-            onClick={() => window.location.href = "/"}
+            onClick={() => window.location.href = "/dashboard"}
           >
             Sign In to Portal
           </Button>

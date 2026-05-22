@@ -54,18 +54,18 @@ import campusImg from "../../imports/image.png";
 import profileImg from "../../imports/profile.png";
 
 const navItems = [
-  { path: "/", label: "Dashboard", icon: Home, category: "main" },
-  { path: "/my-class-schedule", label: "My Class Schedule", icon: Calendar, category: "academic" },
-  { path: "/my-grade", label: "My Grade", icon: GraduationCap, category: "academic" },
-  { path: "/my-transcript", label: "My Transcript", icon: FileText, category: "academic" },
-  { path: "/my-evaluation", label: "My Evaluation", icon: ClipboardList, category: "academic" },
-  { path: "/offered-subject", label: "Offered Subject", icon: BookOpen, category: "enrollment" },
-  { path: "/online-enrollment", label: "Online Enrollment", icon: UserPlus, category: "enrollment" },
-  { path: "/my-student-information", label: "My Student Information", icon: User, category: "student" },
-  { path: "/my-balances", label: "My Balances", icon: DollarSign, category: "student" },
-  { path: "/my-clearance", label: "My Clearance", icon: ClipboardCheck, category: "student" },
-  { path: "/my-appointment", label: "My Appointment", icon: Send, category: "student" },
-  { path: "/graduation-application", label: "My Graduation Application", icon: GraduationCap, category: "applications" },
+  { path: "/dashboard", label: "Dashboard", icon: Home, category: "main" },
+  { path: "/dashboard/my-class-schedule", label: "My Class Schedule", icon: Calendar, category: "academic" },
+  { path: "/dashboard/my-grade", label: "My Grade", icon: GraduationCap, category: "academic" },
+  { path: "/dashboard/my-transcript", label: "My Transcript", icon: FileText, category: "academic" },
+  { path: "/dashboard/my-evaluation", label: "My Evaluation", icon: ClipboardList, category: "academic" },
+  { path: "/dashboard/offered-subject", label: "Offered Subject", icon: BookOpen, category: "enrollment" },
+  { path: "/dashboard/online-enrollment", label: "Online Enrollment", icon: UserPlus, category: "enrollment" },
+  { path: "/dashboard/my-student-information", label: "My Student Information", icon: User, category: "student" },
+  { path: "/dashboard/my-balances", label: "My Balances", icon: DollarSign, category: "student" },
+  { path: "/dashboard/my-clearance", label: "My Clearance", icon: ClipboardCheck, category: "student" },
+  { path: "/dashboard/my-appointment", label: "My Appointment", icon: Send, category: "student" },
+  { path: "/dashboard/graduation-application", label: "My Graduation Application", icon: GraduationCap, category: "applications" },
 ];
 
 const categories = [
@@ -122,7 +122,7 @@ export function Layout() {
             </button>
 
             {/* Back Button (Fixes Heuristic #3) */}
-            {location.pathname !== "/" && (
+            {location.pathname !== "/dashboard" && (
               <Button
                 variant="ghost"
                 size="sm"
@@ -134,7 +134,7 @@ export function Layout() {
               </Button>
             )}
 
-            <Link to="/" className="flex items-center gap-2 sm:gap-3 min-w-0 hover:opacity-80 transition-opacity">
+            <Link to="/dashboard" className="flex items-center gap-2 sm:gap-3 min-w-0 hover:opacity-80 transition-opacity">
               <ImageWithFallback
                 src={logoImg}
                 alt="Caraga State University Logo"
@@ -175,7 +175,7 @@ export function Layout() {
                 <DropdownMenuLabel>My Account</DropdownMenuLabel>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem asChild>
-                  <Link to="/my-account">
+                  <Link to="/dashboard/my-account">
                     <Settings size={16} className="mr-2" />
                     Account Settings
                   </Link>
